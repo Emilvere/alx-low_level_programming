@@ -1,4 +1,4 @@
-C - Hello, World
+ - Hello, World
 1. Preprocessor
 2. Compiler
 3. Assembler
