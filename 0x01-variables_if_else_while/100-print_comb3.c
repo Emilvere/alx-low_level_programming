@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - main function
+ * main - print different combinaion of two digits
  *
  * Return: always 0
  */
+
 int main(void)
 {
 	int i = '0';
@@ -20,10 +21,6 @@ int main(void)
 				putchar(j);
 				if (!(i == '8' && j == '9'))
 				{
-					putchar('\n');
-				}
-				else
-				{
 					putchar(',');
 					putchar(' ');
 				}
@@ -33,5 +30,6 @@ int main(void)
 		j = '0';
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
