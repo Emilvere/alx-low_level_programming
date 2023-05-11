@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 /**
- * Factorial - returns the factorial of a given number
+ * Factorial - a function that returns the factorial of a given number
  * @n: number whose factorial is to be returned
+ *
+ * Description: - A function that returns a factorial of a  given number
+ * the function returns -1 if n is lower than 0
  *
  * Return: factorial
  */
