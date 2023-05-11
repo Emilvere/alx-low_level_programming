@@ -1,9 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * Factorial - a function that returns the factorial of a given number
- * @n: number whose factorial is to be returned
+ * factorial - returns the factorial of a number
+ * @n: number to return the factorial from
  *
  * Return: factorial of n
  */
