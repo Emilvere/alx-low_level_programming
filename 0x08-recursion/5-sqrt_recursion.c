@@ -1,34 +1,33 @@
 #include "main.h"
-#include <stdio.h>
+
+int actual_sqrt_recursion(int n, int i);
 
 /**
- * number - helps find the natural squareroot number
- * @n: natural number starting at 1
- * @root: squareroot number to be found
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to calculate the square root of
  *
- * Return: squareroot of answer
- * if root is not natural squareroot returns -1
- * if root less than 0 returns -1
- */
-int number(int n, int root)
-{
-	if (n * n == root)
-		return (n);
-	if (n == root)
-		return (-1);
-	return (1 * number(n + 1, root));
-}
-
-/**
- * _sqrt_recursion - that returns the natural square root of a number
- * @n: number of which natural square root should be found
- *
- * Return: natural squareroot n
- * if n does not have a natural squareroot, the function should return -1
+ * Return: the resulting square root
  */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (number(1, n));
+	return (actual_sqrt_recursion(n, 0));
+}
+
+/**
+ * actual_sqrt_recursion - recurses to find the natural
+ * square root of a number
+ * @n: number to calculate the sqaure root of
+ * @i: iterator
+ *
+ * Return: the resulting square root
+ */
+int actual_sqrt_recursion(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (actual_sqrt_recursion(n, i + 1));
 }
