@@ -9,16 +9,18 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int special;
 	int i, count = 0;
+	unsigned long int place;
+	unsigned long int special = n ^ m;
 
-	special = n ^ m;
-
-	while (special)
+	for (i = 64; i >= 0; i--)
 	{
-		count++;
-		special &= (special - 1);
+		place = special >> i;
+		if (place & 1)
+			count++;
 	}
 
-	return (special);
+	return (count);
 }
+
+
